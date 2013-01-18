@@ -11,6 +11,31 @@
 .container {
   @include container;
   @include susy-grid-background;
+}
 
-  background-color: pink;
+.header {
+  background: $yellow;
+  .sales {
+    float: right;
+  }
+  .branding {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+.features {
+  background: $lightGray;
+}
+.steps {
+  background: $Gray;
+}
+.notify {
+  background: $white;
+}
+.sales{
+  background: $yellow;
+}
+.footer {
+  background: $darkGray;
 }
