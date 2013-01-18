@@ -1,3 +1,5 @@
+/* Will be compiled down to a single stylesheet with your sass files */
+
 // ---------------------------------------------------------------------------
 // Imports
 
@@ -9,4 +11,6 @@
 .container {
   @include container;
   @include susy-grid-background;
+
+  background-color: pink;
 }
