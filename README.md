@@ -12,6 +12,11 @@ Getting started
 2. Run `yeoman build`
 3. The build site will be in the newly created *dist*.
 
+To run the webserver, do:
+
+1. `yeoman server`
+2. Point your browser at `http://localhost:3501/`
+
 Installing phantomjs
 --------------------
 
