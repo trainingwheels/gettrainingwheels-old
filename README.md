@@ -17,6 +17,8 @@ To run the webserver, do:
 1. `yeoman server`
 2. Point your browser at `http://localhost:3501/`
 
+Yeoman server will watch the SASS files using Compass and rebuild them for you.
+
 Installing phantomjs
 --------------------
 
