@@ -16,7 +16,7 @@
 .header {
   //background: $yellow;
   background: url(../images/tw-pattern-yellow.png) repeat;
-  .sales {
+  .sales-button {
     float: right;
   }
   .branding {
@@ -31,16 +31,59 @@
   }
 }
 .features {
+  padding-top: 2em;
+  padding-bottom: 2em;
   background: $lightGray;
+  .description {
+    @include span-columns(6);
+    margin-top: 2em;
+  }
 }
 .steps {
   background: $Gray;
+  text-align: center;
+  padding-bottom: 2em;
+  padding-top: 1em;
+  .step-one, .step-two, .step-three {
+    @include span-columns(3.5);
+    margin-right: 0;
+    .step-one-circle, .step-two-circle, .step-three-circle {
+      display: block;
+      background-color: $yellow;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#f7f7f7), to(#e7e7e7));
+      background-image: -webkit-linear-gradient(top, #f7f7f7, #e7e7e7); 
+      background-image: -moz-linear-gradient(top, #f7f7f7, #e7e7e7); 
+      background-image: -ms-linear-gradient(top, #f7f7f7, #e7e7e7); 
+      background-image: -o-linear-gradient(top, #f7f7f7, #e7e7e7); 
+      color: $darkGray;
+      margin: 1em auto;
+      width: 144px;
+      height: 144px;
+      position: relative;
+      text-align: center;
+      line-height: 144px;
+      border-radius: 50%;
+    } 
+  }
+  .step-one, .step-two {
+    padding-right: 1.5em;
+  }
+  .step-three, .step-two {
+    padding-left: 1.5em;
+  }
 }
 .notify {
   background: $white;
+  padding-bottom: 4em;
+  padding-top: 4em;
 }
-.sales{
+.sales {
   background: $yellow;
+  padding-bottom: 4em;
+  padding-top: 4em;
+  span {
+    @include span-columns(5,12);
+  }
 }
 .footer {
   background: $darkGray;

@@ -10,9 +10,9 @@
         <meta name="description" content=""/>
         <meta name="viewport" content="width=device-width"/>
         <link rel="stylesheet" href="styles/main.css"/>
-        <link href="/fonts/ss-symbolicons-block/ss-symbolicons-block.css" rel="stylesheet" />
-        <link href="/fonts/ss-standard/ss-standard.css" rel="stylesheet" />
-        <link href="/fonts/ss-social/ss-social.css" rel="stylesheet" />
+        <link href="../fonts/ss-symbolicons-block/ss-symbolicons-block.css" rel="stylesheet" />
+        <link href="../fonts/ss-standard/ss-standard.css" rel="stylesheet" />
+        <link href="../fonts/ss-social/ss-social.css" rel="stylesheet" />
 
         <!-- build:js scripts/utils.js -->
         <script src="scripts/vendor/modernizr.min.js"></script>
@@ -21,7 +21,7 @@
     <body>
     <div class="header">
       <div class="container">
-        <button class="sales">Contact Sales</button>
+        <button class="sales-button" href="#contact-sales">Contact Sales</button>
         <div class="branding">
           <h1>Training Wheels</h1>
           <h3>training environments made easy.</h3>
@@ -31,23 +31,37 @@
     </div>
       <div class="features">
         <div class="container">
-          <h2>Teach smarter.</h2>
-          <p>Let Training Wheels simplify your set-up process. Setting up 100 sandbox environments is as easy as setting up just one. Last minute curriculum changes or roster additions are a cinch to manage with our easy-to-use class dashboard.</p>
-          <h2>Teach any platform.</h2>
-          <p>From Drupal to Javascript, if you teach a framework or platform, Training Wheels can help you configure and set-up sandbox environments for your students according to your individual needs.</p>
-          <h2>Teach anywhere.</h2>
-          <p>Training Wheels can be accessed from any device with an Internet connection. Teach a webinar to students miles away right from your home desktop, or use a mobile device to check student progress as you walk through your classroom.</p>
+          <div class="description">
+            <h2>Teach smarter.</h2>
+            <p>Let Training Wheels simplify your set-up process. Setting up 100 sandbox environments is as easy as setting up just one. Last minute curriculum changes or roster additions are a cinch to manage with our easy-to-use class dashboard.</p>
+          </div>
+          <div class="description">
+            <h2>Teach any platform.</h2>
+            <p>From Drupal to Javascript, if you teach a framework or platform, Training Wheels can help you configure and set-up sandbox environments for your students according to your individual needs.</p>
+          </div>
+          <div class="description">
+            <h2>Teach anywhere.</h2>
+            <p>Training Wheels can be accessed from any device with an Internet connection. Teach a webinar to students miles away right from your home desktop, or use a mobile device to check student progress as you walk through your classroom.</p>
+          </div>
         </div>
       </div>
       <div class="steps">
         <div class="container">
-          <div class="icon-symbolicons ss-symbolicons ss-oven">.</div>
-          <h2>1. Create your course</h2>
-          <p>Set up your platform or codebase.</p>
-          <h2>2. Add your students</h2>
-          <p>Each trainee gets their own URL and login. It's easy to add more students at any time! .</p>
-          <h2>Deploy your environments</h2>
-          <p>Now you're ready to teach! You can make changes to your environment and sync as often as you like.</p>
+          <div class="step-one">
+            <div class="step-one-circle icon-symbolicons ss-symbolicons-block ss-graduationcap"></div>
+            <h2>Create your course</h2>
+            <p>Set up your platform or codebase.</p>
+          </div>
+          <div class="step-two">
+            <div class="step-two-circle icon-symbolicons ss-symbolicons-block ss-adduser"></div>
+            <h2>Add your students</h2>
+            <p>Each trainee gets their own URL and login. It's easy to add more students at any time! .</p>
+          </div>
+            <div class="step-three">
+            <div class="step-three-circle icon-symbolicons ss-symbolicons-block ss-desktop"></div>
+            <h2>Deploy your environments</h2>
+            <p>Now you're ready to teach! You can make changes to your environment and sync as often as you like.</p>
+          </div>
         </div>
       </div>
       <div class="notify">
@@ -57,9 +71,12 @@
       </div>
       <div class="sales">
         <div class="container">
-          <h2>Contact Sales</h2>
-          <p>While we are still working on a full release of Training Wheels, we are available at any time for professional training consulting services, including custom tailoring Training Wheels to your needs. If you are interested in our training consulting services, please get in touch with our sales team.</p>
-          <p>sales@gettrainingwheels.com </p>
+          <span>
+            <a name="contact-sales"></a>
+            <h2>Contact Sales</h2>
+            <p>While we are still working on a full release of Training Wheels, we are available at any time for professional training consulting services, including custom tailoring Training Wheels to your needs. If you are interested in our training consulting services, please get in touch with our sales team.</p>
+            <p>sales@gettrainingwheels.com </p>
+          </span>
         </div>
       </div>
       <div class="footer">
