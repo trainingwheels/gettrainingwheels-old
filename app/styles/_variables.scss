@@ -21,7 +21,17 @@ $highlight: $lightGray;
 
 // First lets declare our own fonts
 
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('../fonts/bebas-neue/BebasNeue-webfont.eot');
+    src: url('../fonts/bebas-neue/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebas-neue/BebasNeue-webfont.woff') format('woff'),
+         url('../fonts/bebas-neue/BebasNeue-webfont.ttf') format('truetype'),
+         url('../fonts/bebas-neue/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
+}
 
 // Font faces, stacks and sizes.
 
