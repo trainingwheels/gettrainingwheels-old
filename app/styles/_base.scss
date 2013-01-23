@@ -16,3 +16,15 @@ $gutter-width   : 1em;
 $grid-padding   : $gutter-width;
 
 $show-grid-backgrounds  : false;
+
+// Respond-to setup.
+// These are named breakpoints. They can vary in complexity, allowing you to
+// get rid of the cognitive load behind typing and remembering media queries.
+//
+// @see https://github.com/Snugug/respond-to/blob/master/README.md
+// @see https://github.com/canarymason/breakpoint/blob/master/README.markdown
+$breakpoints: 'smartphone' (320px),
+              'smartphone landscape' (480px),
+              'tablet' (768px),
+              'desktop' (980px);
+

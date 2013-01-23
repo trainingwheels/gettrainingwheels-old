@@ -40,7 +40,7 @@
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
-  border: 1px solid darken($color, 20%);
+  border: none;
   background-color: $color;
   *border: 0; // Remove the border to prevent IE7's black border on input:focus
   @include border-radius(5px);
@@ -110,3 +110,16 @@
   *display: inline; // IE7 inline-block hack
   *zoom: 1;
 }
+
+// Respond-to
+
+@mixin respond-to($media) {
+    @if $media == iphone {
+        @media only screen and (min-width: 480px) { 
+            @content; } }
+    @else if $media == ipad {
+            @media only screen and (min-width: 768px) { 
+                @content; } }
+    @else if $media == desktop {
+        @media only screen and (min-width: 960px) { 
+            @content; } } }

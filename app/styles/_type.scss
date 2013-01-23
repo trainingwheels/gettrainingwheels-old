@@ -6,10 +6,11 @@
 
 body {
   margin: 0;
-  font-family: $helvetica;
+  font-family: $opensans;
+  font-weight: 400;
   font-size: $base-font-size;
   line-height: $base-line-height;
-  color: $darkGray;
+  color: $blackGray;
   background-color: $white;
 }
 
@@ -24,7 +25,7 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $opensans;
-  font-weight: normal;
+  font-weight: 400;
   margin-top: 0;
   }
 
@@ -36,6 +37,7 @@ h1 {
 h2 {
   font-size: $h2-font-size;
   line-height: 1.2em;
+  font-weight: 700;
 }
 
 h3 {
@@ -138,7 +140,7 @@ blockquote {
 
 
 a {
-  color: $blue;
+  color: $yellow;
   text-decoration: none;
   &:hover {
     text-decoration: underline;
