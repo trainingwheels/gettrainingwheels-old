@@ -68,9 +68,12 @@
   }
 }
 .features {
-  padding-top: 4em;
+  padding-top: 1em;
   padding-bottom: 4em;
   background: $lightGray;
+  @include respond-to(ipad) { 
+    padding-top: 4em;
+  }
   h2 {
     letter-spacing: -1px;
     font-style: italic;
@@ -79,14 +82,20 @@
   .description {
     @include span-columns(12);
      @include respond-to(ipad) { 
-        @include span-columns(5); 
+       @include span-columns(4);
+         @include respond-to(widescreen) { 
+           @include span-columns(6); 
+         } 
      }
     margin-top: 2em;
   }
-  #classroom {
+  #classroom, #teach-anything {
     float: none;
+    @include span-columns(10 omega, 12);
     @include respond-to(ipad) { 
       float: right;
+      height: auto;
+      width: auto;
     }
   }
 }
@@ -112,7 +121,7 @@
       position: relative;
       text-align: center;
       line-height: 144px;
-      border-radius: 50%;
+      @include border-radius(50%);
     }
     .step-one-circle {
       background-color: $brightBlue;
