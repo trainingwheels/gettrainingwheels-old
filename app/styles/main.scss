@@ -141,6 +141,9 @@
     @include respond-to(ipad) { 
       @include span-columns(5, 12);
     }
+    a {
+      color: $blackGray;
+    }
   }
 }
 .footer {
@@ -160,3 +163,31 @@
     }
   }
 }
+
+/* Form Input */
+
+//Default Input Fields
+
+input {
+  @include border-radius(4px);
+  font-size: $h4-font-size;
+  font-family: $opensans;
+  padding: $base-line-height/4 $base-line-height/3;
+  color: $darkGray;
+  margin-left: 5px;
+  border: 1px solid $mediumGray;
+  background-color: $lightGray;
+  margin-bottom: 1em;
+  &:hover {
+    border: 1px solid $Gray;
+  }
+  &:focus {
+    border: 1px solid $Gray;
+    background-color: $whiteGray;
+    outline: medium none;
+    &:hover {
+      border: 1px solid $Gray;
+    }
+  }
+}
+
