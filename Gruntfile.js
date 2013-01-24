@@ -1,3 +1,4 @@
+var path = require('path');
 module.exports = function( grunt ) {
   'use strict';
   //
@@ -179,9 +180,48 @@ module.exports = function( grunt ) {
 
   // add a task to publish the site.
   grunt.registerTask('publish', 'Publish the site to github pages.', function() {
-    grunt.log.write('The output diretory is ' + grunt.config.get('output') + '. ').ok();
-    
-    console.log(grunt.config.get());
+    var config = grunt.config(),
+    cb = this.async();
+    grunt.file.setBase(config.base);
+
+    // todo add this as a config option.
+    var publishDir = '../trainingwheels.github.com';
+
+    // check that the publish directory is in the right place
+    if (grunt.file.isDir(publishDir)) {
+      grunt.log.write('Publish directory found.').ok();
+    } else {
+      grunt.fail.warn('Couldn\'t find the publish directory go check it out from github.');
+    }
+
+    // check for the built directory.
+    if (grunt.file.isDir(config.outpt)) {
+      grunt.log.write('Yeoman build diretory found.');
+    } else {
+      grunt.fail.warn('run a build first.');
+    }
+
+    // TODO: run a build as part of this task, should be as simple as the below,
+    // but running the build task exits yeoman.
+    //grunt.task.run('build');
+    // copy the files from the build into the  publish directory.
+
+    // stolen from yeoman/misc.js
+
+    // todo a way to configure this from Gruntfile
+    var ignores = ['.gitignore', '.ignore', '.buildignore'];
+
+    grunt.task.helper('copy', config.output, publishDir, ignores, function(e) {
+      if ( e ) {
+        grunt.log.error( e.stack || e.message );
+      } else {
+        grunt.log.ok( path.resolve( config.output ) + ' -> ' + path.resolve( publishDir ) );
+      }
+      cb(!e);
+    });
+    // run the commandline git commands to push the site.
+    //http://stackoverflow.com/questions/10456865/running-a-command-in-a-grunt-task
+
   });
 
 };
