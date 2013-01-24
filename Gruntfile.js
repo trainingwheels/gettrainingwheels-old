@@ -177,4 +177,11 @@ module.exports = function( grunt ) {
   // Alias the `test` task to run the `mocha` task instead
   grunt.registerTask('test', 'mocha');
 
+  // add a task to publish the site.
+  grunt.registerTask('publish', 'Publish the site to github pages.', function() {
+    grunt.log.write('The output diretory is ' + grunt.config.get('output') + '. ').ok();
+    
+    console.log(grunt.config.get());
+  });
+
 };
