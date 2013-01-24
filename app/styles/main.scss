@@ -91,15 +91,11 @@
   }
   #classroom, #teach-anything {
     float: none;
-    @include span-columns(12 omega);
+    @include span-columns(10 omega, 12);
     @include respond-to(ipad) { 
-      //@include span-columns (5 omega);
       float: right;
       height: auto;
       width: auto;
-      //@include respond to(desktop) {
-      //  @include span-columns (5 omega);
-      //}
     }
   }
 }
