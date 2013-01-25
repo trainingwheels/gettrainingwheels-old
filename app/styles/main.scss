@@ -14,7 +14,6 @@
 }
 
 .header {
-  //background: $yellow;
   background: url(../images/tw-pattern-dark.png) repeat;
   padding-bottom: 2em;
   .sales-button {
@@ -79,23 +78,74 @@
     font-style: italic;
     color: $darkGray;
   }
-  .description {
+  .description-left {
     @include span-columns(12);
      @include respond-to(ipad) { 
-       @include span-columns(4);
+       @include span-columns(5);
+       @include respond-to (desktop) {
+         @include span-columns(4);
          @include respond-to(widescreen) { 
            @include span-columns(6); 
          } 
+       }
      }
     margin-top: 2em;
   }
-  #classroom, #teach-anything {
-    float: none;
-    @include span-columns(10 omega, 12);
+  .description-right {
+    @include span-columns(12);
+    margin-bottom: 2em;
     @include respond-to(ipad) { 
+      @include span-columns(5);
+      margin-top: 4em;
       float: right;
-      height: auto;
-      width: auto;
+      @include respond-to (desktop) {
+        @include span-columns(4);
+        @include respond-to(widescreen) { 
+           @include span-columns(6); 
+           margin-top: 4em;
+           float: right;
+        } 
+      }
+    }
+    margin-top: 2em;
+  }
+  #classroom, #map {
+    float: none;
+    @include span-columns(12 omega, 12);
+    @include respond-to (iphone) {
+      @include span-columns(9 omega, 12);
+      @include respond-to(ipad) { 
+        float: right;
+        height: auto;
+        width: 50%;
+        @include respond-to(widescreen) { 
+          float: right;
+          height: auto;
+          width: auto;      
+        }
+      }       
+    }
+  }
+  #cloud {
+    float: none;
+    @include span-columns(12, 12);
+    @include respond-to (iphone) {
+      @include span-columns(9, 12);
+      @include respond-to(ipad) {
+        float: left;
+        height: auto;
+        width: 50%;
+        margin-right: .5em;
+        margin-bottom: 4em;
+        margin-top: 3em;
+        @include respond-to(widescreen) { 
+          float: left;
+          height: auto;
+          width: auto;
+          margin-right: .5em;
+          margin-bottom: 4em;      
+        } 
+      }
     }
   }
 }
@@ -142,33 +192,56 @@
   }
 }
 .sales {
-  background: $yellow;
+  background: url(../images/yellow-noise.png) repeat;
   padding-bottom: 4em;
   padding-top: 4em;
+  #butler {
+    margin: 0 auto;
+    width: 50%;
+    @include respond-to(iphone) {
+      @include span-columns(4, 12);
+      float: left;
+      @include respond-to(ipad) {
+        width: auto;
+      }
+    }
+  }
   span {
     @include span-columns(12);
+    margin-top: 2em;
     @include respond-to(ipad) { 
-      @include span-columns(5, 12);
+      @include span-columns(7 omega, 12);
+      margin-top: 2em;
     }
     a {
+      font-size: 18px;
+      font-weight: 700;	
       color: $blackGray;
     }
   }
 }
 .footer {
-  background: url(../images/brown-noise.png) repeat;
+  background: url(../images/tw-pattern-dark.png) repeat;
   color: $lightGray;
-  min-height: 80px;
-  ul {
-    padding-top: 1em;
-    margin-left: 0;
-    li {
-      display: inline;
-      list-style-type: none;
-      padding-right: 20px;
+  min-height: 120px;
+  .footer-overlay {
+    min-height: 120px;
+    background-color: rgba(0, 0, 0, 0.5);
+    ul {
+      padding-top: 1.5em;
+      margin-left: 0;
+      li {
+        display: inline;
+        list-style-type: none;
+        padding-right: 20px;
+      }
+      .contact-footer {
+        padding-left: 20px;
+      }
     }
-    .documentation {
-      padding-left: 15px;
+    .copyright {
+      font-size: 12px;
+      line-height: 16px;
     }
   }
 }
