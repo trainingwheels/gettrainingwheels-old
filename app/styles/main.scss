@@ -59,6 +59,7 @@
     .signup {
       @include button-make($yellow);
       padding: .5em 3em;
+      -webkit-appearance: none;
     }
     p {
     padding-left: 1em;
@@ -100,6 +101,7 @@
       float: right;
       @include respond-to (desktop) {
         @include span-columns(4);
+        float: right;
         @include respond-to(widescreen) { 
            @include span-columns(6); 
            margin-top: 4em;
@@ -181,8 +183,7 @@
     }
   }
   .step-one, .step-two {
-    padding-right: 1.5em;
-    
+    margin-right: 1.5em;   
   }
   .step-three, .step-two {
     padding-left: 0;
