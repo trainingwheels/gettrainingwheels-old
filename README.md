@@ -1,7 +1,8 @@
 gettrainingwheels.org
 =====================
 
-The source for the gettrainingwheels.org website.
+The old source for the gettrainingwheels.org website. This is no longer used. Please see trainingwheels/trainingwheels.github.io instead.
+
 
 Generated using Yeoman.
 
